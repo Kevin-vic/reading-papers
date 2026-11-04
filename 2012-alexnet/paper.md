@@ -1,4 +1,4 @@
-# ImageNet Classification with Deep Convolutional Neural Networks
+# ImageNet Classification with ==Deep Convolutional Neural Networks==
 # 基于深度卷积神经网络的 ImageNet 图像分类
 
 **作者（Authors）**：Alex Krizhevsky (kriz@cs.utoronto.ca), Ilya Sutskever (ilya@cs.utoronto.ca), Geoffrey E. Hinton (hinton@cs.utoronto.ca) — University of Toronto（多伦多大学）
@@ -11,7 +11,7 @@
 
 **Original:** We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called "dropout" that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%, compared to 26.2% achieved by the second-best entry.
 
-**中文:** 我们训练了一个大型的深度卷积神经网络（Convolutional Neural Network，CNN），把 ImageNet LSVRC-2010 竞赛中的 120 万张高分辨率图像分类到 1000 个不同类别。在测试数据上，我们取得了 37.5% 的 top-1 错误率和 17.0% 的 top-5 错误率，显著优于此前的最优结果（state-of-the-art）。该神经网络拥有 6000 万参数和 65 万神经元，由五个卷积层（其中部分后接最大池化层）和三个全连接层构成，最后一层为 1000 路的 Softmax。为了加快训练，我们使用了非饱和神经元和非常高效的卷积运算 GPU 实现。为了减少全连接层的过拟合，我们采用了一种近期提出的、被证明非常有效的正则化方法——随机失活（dropout）。我们还把该模型的一个变体提交到 ILSVRC-2012 竞赛，取得了 15.3% 的获胜 top-5 测试错误率，而第二名参赛者的成绩为 26.2%。
+**中文:** 我们训练了一个大型的深度卷积神经网络（Convolutional Neural Network，CNN），把 ImageNet LSVRC-2010 竞赛中的 120 万张高分辨率图像分类到 1000 个不同类别。在测试数据上，我们取得了 37.5% 的 top-1 错误率和 17.0% 的 top-5 错误率，显著优于此前的最优结果（state-of-the-art）。该神经网络拥有 6000 万参数和 65 万神经元，由五个卷积层（其中部分后接最大池化层）和三个全连接层构成，最后一层为 1000 路的 Softmax。为了加快训练，我们使用了==非饱和神经元==和非常高效的卷积运算 GPU 实现。为了减少全连接层的过拟合，我们采用了一种近期提出的、被证明非常有效的==正则化方法——随机失活（dropout）==。我们还把该模型的一个变体提交到 ILSVRC-2012 竞赛，取得了 15.3% 的获胜 top-5 测试错误率，而第二名参赛者的成绩为 26.2%。
 
 ---
 
@@ -19,11 +19,15 @@
 
 **Original:** Current approaches to object recognition make essential use of machine learning methods. To improve their performance, we can collect larger datasets, learn more powerful models, and use better techniques for preventing overfitting. Until recently, datasets of labeled images were relatively small — on the order of tens of thousands of images (e.g., NORB [16], Caltech-101/256 [8, 9], and CIFAR-10/100 [12]). Simple recognition tasks can be solved quite well with datasets of this size, especially if they are augmented with label-preserving transformations. For example, the current-best error rate on the MNIST digit-recognition task (<0.3%) approaches human performance [4]. But objects in realistic settings exhibit considerable variability, so to learn to recognize them it is necessary to use much larger training sets. And indeed, the shortcomings of small image datasets have been widely recognized (e.g., Pinto et al. [21]), but it has only recently become possible to collect labeled datasets with millions of images. The new larger datasets include LabelMe [23], which consists of hundreds of thousands of fully-segmented images, and ImageNet [6], which consists of over 15 million labeled high-resolution images in over 22,000 categories.
 
-**中文:** 当前的目标识别（object recognition）方法都大量依赖机器学习方法。要提高这些方法的性能，我们可以收集更大的数据集、学习更强的模型，并使用更好的技术来防止过拟合（overfitting）。直到最近，带标签的图像数据集规模还相对较小——只有数万张图像的量级（例如 NORB [16]、Caltech-101/256 [8, 9] 和 CIFAR-10/100 [12]）。这种规模的数据集已经可以很好地解决简单的识别任务，尤其是配合保持标签的变换（label-preserving transformations）进行扩充时。例如，MNIST 数字识别任务上当前最好的错误率（<0.3%）已接近人类水平 [4]。但现实场景中的物体表现出相当大的可变性，因此要学会识别它们，必须使用大得多的训练集。事实上，小规模图像数据集的缺陷早已被广泛认识到（例如 Pinto 等人 [21]），但直到最近才可能收集到包含数百万张图像的带标签数据集。这些新的大规模数据集包括 LabelMe [23]（包含数十万张完全分割的图像）和 ImageNet [6]（包含超过 1500 万张带标签的高分辨率图像，分属 22,000 多个类别）。
+**中文:** 当前的目标识别（object recognition）方法都大量依赖机器学习方法。要提高这些方法的性能，==我们可以收集更大的数据集、学习更强的模型，并使用更好的技术来防止过拟合（overfitting）。==直到最近，带标签的图像数据集规模还相对较小——只有数万张图像的量级（例如 NORB [16]、Caltech-101/256 [8, 9] 和 CIFAR-10/100 [12]）。这种规模的数据集已经可以很好地解决简单的识别任务，尤其是配合保持标签的变换（label-preserving transformations）进行扩充时。例如，MNIST 数字识别任务上当前最好的错误率（<0.3%）已接近人类水平 [4]。但现实场景中的物体表现出相当大的可变性，因此要学会识别它们，必须使用大得多的训练集。事实上，小规模图像数据集的缺陷早已被广泛认识到（例如 Pinto 等人 [21]），但直到最近才可能收集到包含数百万张图像的带标签数据集。这些新的大规模数据集包括 LabelMe [23]（包含数十万张完全分割的图像）和 ==ImageNet== [6]（包含超过 1500 万张带标签的高分辨率图像，分属 22,000 多个类别）。
 
 **Original:** To learn about thousands of objects from millions of images, we need a model with a large learning capacity. However, the immense complexity of the object recognition task means that this problem cannot be specified even by a dataset as large as ImageNet, so our model should also have lots of prior knowledge to compensate for all the data we don't have. Convolutional neural networks (CNNs) constitute one such class of models [16, 11, 13, 18, 15, 22, 26]. Their capacity can be controlled by varying their depth and breadth, and they also make strong and mostly correct assumptions about the nature of images (namely, stationarity of statistics and locality of pixel dependencies). Thus, compared to standard feedforward neural networks with similarly-sized layers, CNNs have much fewer connections and parameters and so they are easier to train, while their theoretically-best performance is likely to be only slightly worse.
 
-**中文:** 要从数百万张图像中学习数千种物体，我们需要一个学习容量（learning capacity）很大的模型。然而，目标识别任务的复杂性极高，意味着即使像 ImageNet 这么大的数据集也无法完全刻画该问题，因此我们的模型还应当具备大量的先验知识，以弥补我们所缺失的数据。卷积神经网络（Convolutional Neural Network，CNN）就是这样一类模型 [16, 11, 13, 18, 15, 22, 26]。它们的容量可以通过改变深度和宽度来控制，并且它们对图像的本质（即统计平稳性和像素依赖的局部性）作出了强有力且大体正确的假设。因此，与层规模相近的标准前馈神经网络（feedforward neural network）相比，CNN 的连接和参数少得多，因而更容易训练，而其理论上的最优性能可能只会稍差一些。
+**中文:** ==要从数百万张图像中学习数千种物体，我们需要一个学习容量（learning capacity）很大的模型。==然而，目标识别任务的复杂性极高，意味着即使像 ImageNet 这么大的数据集也无法完全刻画该问题，因此我们的模型还应当具备大量的先验知识，以弥补我们所缺失的数据。卷积神经网络（Convolutional Neural Network，CNN）就是这样一类模型 [16, 11, 13, 18, 15, 22, 26]。它们的容量可以通过改变深度和宽度来控制，并且它们对图像的本质（即==统计平稳性和像素依赖的局部性==）作出了强有力且大体正确的假设。因此，与层规模相近的标准前馈神经网络（feedforward neural network）相比，CNN 的连接和参数少得多，因而更容易训练，而其理论上的最优性能可能只会稍差一些。
+
+> [!NOTE]
+> ”统计平稳性“指的是：图形中相同或相似的结构即使在不同的位置，它们的像素矩阵也是相似的。比如说，一个直线，不管是在图片的左下角还是右上角，它的矩阵应该都长得差不多。
+> ”像素依赖的局部性“指的是：一个像素跟它附近的像素关联很大，而跟它远处的像素关联则很小。一个苹果的边缘处某点跟它附近关联很大（内含”边缘“的特征），而跟它远处的像素很有可能没什么关系。
 
 **Original:** Despite the attractive qualities of CNNs, and despite the relative efficiency of their local architecture, they have still been prohibitively expensive to apply in large scale to high-resolution images. Luckily, current GPUs, paired with a highly-optimized implementation of 2D convolution, are powerful enough to facilitate the training of interestingly-large CNNs, and recent datasets such as ImageNet contain enough labeled examples to train such models without severe overfitting.
 
@@ -31,13 +35,17 @@
 
 **Original:** The specific contributions of this paper are as follows: we trained one of the largest convolutional neural networks to date on the subsets of ImageNet used in the ILSVRC-2010 and ILSVRC-2012 competitions [2] and achieved by far the best results ever reported on these datasets. We wrote a highly-optimized GPU implementation of 2D convolution and all the other operations inherent in training convolutional neural networks, which we make available publicly^1. Our network contains a number of new and unusual features which improve its performance and reduce its training time, which are detailed in Section 3. The size of our network made overfitting a significant problem, even with 1.2 million labeled training examples, so we used several effective techniques for preventing overfitting, which are described in Section 4. Our final network contains five convolutional and three fully-connected layers, and this depth seems to be important: we found that removing any convolutional layer (each of which contains no more than 1% of the model's parameters) resulted in inferior performance.
 
-**中文:** 本文的具体贡献如下：我们在 ILSVRC-2010 和 ILSVRC-2012 竞赛 [2] 所用的 ImageNet 子集上训练了迄今为止最大的卷积神经网络之一，并在这两个数据集上取得了远优于以往所有已报告结果的成绩。我们编写了 2D 卷积以及卷积神经网络训练中所有其他运算的高度优化的 GPU 实现，并将其公开¹。我们的网络包含若干新颖而不寻常的设计，这些设计提升了性能并缩短了训练时间，详见第 3 节。即使有 120 万带标签训练样本，我们网络的规模仍使过拟合成为一个严重问题，因此我们采用了几种有效的防过拟合技术，详见第 4 节。我们最终的网络包含五个卷积层和三个全连接层，这个深度似乎很重要：我们发现移除任意一个卷积层（每层参数不超过模型总参数的 1%）都会导致性能变差。
+**中文:** 本文的具体贡献如下：我们在 ILSVRC-2010 和 ILSVRC-2012 竞赛 [2] 所用的 ImageNet 子集上训练了迄今为止最大的卷积神经网络之一，并在这两个数据集上取得了远优于以往所有已报告结果的成绩。我们编写了 2D 卷积以及卷积神经网络训练中所有其他运算的高度优化的 GPU 实现，并将其公开¹。我们的网络包含若干==新颖而不寻常的设计==，这些设计提升了性能并缩短了训练时间，详见第 3 节。即使有 120 万带标签训练样本，我们网络的规模仍使过拟合成为一个严重问题，因此我们采用了几种==有效的防过拟合技术==，详见第 4 节。我们最终的网络包含五个卷积层和三个全连接层，==这个深度似乎很重要：我们发现移除任意一个卷积层（每层参数不超过模型总参数的 1%）都会导致性能变差。==
 
 > **脚注 1**：¹http://code.google.com/p/cuda-convnet/ （原文为 URL，不译）
 
 **Original:** In the end, the network's size is limited mainly by the amount of memory available on current GPUs and by the amount of training time that we are willing to tolerate. Our network takes between five and six days to train on two GTX 580 3GB GPUs. All of our experiments suggest that our results can be improved simply by waiting for faster GPUs and bigger datasets to become available.
 
 **中文:** 归根结底，网络规模主要受限于当前 GPU 的可用显存，以及我们愿意承受的训练时长。我们的网络在两张 GTX 580 3GB GPU 上需要训练五到六天。我们所有的实验都表明，只要等待更快的 GPU 和更大的数据集出现，我们的结果就可以进一步提升。
+
+> [!NOTE] Note
+> 三位研究者实现了一个在两块GTX580显卡上并行训练一个模型的技术，这需要两个显卡的数据之间可以同步地传输。另外，我们也可以在Method部分看到：两个显卡在什么地方需要发生交互。
+
 
 ---
 
@@ -49,11 +57,18 @@
 
 **Original:** ILSVRC-2010 is the only version of ILSVRC for which the test set labels are available, so this is the version on which we performed most of our experiments. Since we also entered our model in the ILSVRC-2012 competition, in Section 6 we report our results on this version of the dataset as well, for which test set labels are unavailable. On ImageNet, it is customary to report two error rates: top-1 and top-5, where the top-5 error rate is the fraction of test images for which the correct label is not among the five labels considered most probable by the model.
 
-**中文:** ILSVRC-2010 是唯一一版公开测试集标签的 ILSVRC，因此我们的大多数实验都在这个版本上进行。由于我们还参加了 ILSVRC-2012 竞赛，我们在第 6 节也报告了在该版本数据集上的结果，该版本的测试集标签不可得。在 ImageNet 上，惯例是报告两种错误率：top-1 和 top-5，其中 top-5 错误率指正确标签不在模型认为最可能的五个标签之中的测试图像所占的比例。
+**中文:** ILSVRC-2010 是唯一一版公开测试集标签的 ILSVRC，因此我们的大多数实验都在这个版本上进行。由于我们还参加了 ILSVRC-2012 竞赛，我们在第 6 节也报告了在该版本数据集上的结果，该版本的==测试集标签不可得==。在 ImageNet 上，惯例是报告两种错误率：top-1 和 top-5，其中 top-5 错误率指正确标签不在模型认为最可能的五个标签之中的测试图像所占的比例。
+
+> [!NOTE] Note
+> 这就是为什么下文展示的成果中，ILSVRC-2012竞赛没有一个固定的得分，因为数据集不公开。
+
 
 **Original:** ImageNet consists of variable-resolution images, while our system requires a constant input dimensionality. Therefore, we down-sampled the images to a fixed resolution of 256 × 256. Given a rectangular image, we first rescaled the image such that the shorter side was of length 256, and then cropped out the central 256×256 patch from the resulting image. We did not pre-process the images in any other way, except for subtracting the mean activity over the training set from each pixel. So we trained our network on the (centered) raw RGB values of the pixels.
 
-**中文:** ImageNet 中的图像分辨率不一，而我们的系统要求固定的输入维度。因此，我们将图像下采样到 256 × 256 的固定分辨率。给定一张矩形图像，我们首先对图像进行缩放，使其短边长度为 256，然后从缩放后的图像中裁剪出中心 256×256 的图像块。除了从每个像素中减去训练集上的平均值之外，我们没有对图像做任何其他预处理。因此，我们是在像素的（中心化后的）原始 RGB 值上训练网络的。
+**中文:** ImageNet 中的图像分辨率不一，而我们的系统要求固定的输入维度。因此，我们将图像下采样到 256 × 256 的固定分辨率。给定一张矩形图像，我们首先对图像进行缩放，使其短边长度为 256，然后从缩放后的图像中裁剪出中心 256×256 的图像块。除了从每个像素中减去训练集上的平均值之外，我们没有对图像做任何其他预处理。==因此，我们是在像素的（中心化后的）原始 RGB 值上训练网络的。==
+
+> [!NOTE] Note
+> 这其实是一个非常重要的突破：AlexNet并不需要人工设计特征，只需要给它足够的测试集规模，它就能自己在原始数据中学会特征、做出分类，并且做得还远远比人工要好。此处应该被强调一下。
 
 ---
 
@@ -65,7 +80,7 @@
 
 ### 3.1 ReLU Nonlinearity（ReLU 非线性）
 
-> **图 1（译）**：使用 ReLU（实线）的四层卷积神经网络在 CIFAR-10 上达到 25% 训练错误率的速度，比使用 tanh 神经元的同等网络（虚线）快六倍。两个网络的学习率均独立选取，以使训练尽可能快。未采用任何形式的正则化。这里展示的效果大小随网络结构而异，但使用 ReLU 的网络始终比使用饱和神经元的同等网络快数倍。（原图见 paper.pdf 第 3 页，见下方图）
+> **图 1（译）**：使用 ReLU（实线）的四层卷积神经网络在 CIFAR-10 上达到 25% 训练错误率的速度，比使用 tanh 神经元的同等网络（虚线）快六倍。两个网络的学习率均独立选取，以使训练尽可能快。未采用任何形式的正则化。这里展示的效果大小随网络结构而异，==但使用 ReLU 的网络始终比使用饱和神经元的同等网络快数倍==。（原图见 paper.pdf 第 3 页，见下方图）
 
 ![第1号图（原图裁剪）](assets/figures/fig-1.png)
 
@@ -73,24 +88,38 @@
 
 **Original:** The standard way to model a neuron's output f as a function of its input x is with f(x) = tanh(x) or f(x) = (1 + e^(−x))^(−1). In terms of training time with gradient descent, these saturating nonlinearities are much slower than the non-saturating nonlinearity f(x) = max(0, x). Following Nair and Hinton [20], we refer to neurons with this nonlinearity as Rectified Linear Units (ReLUs). Deep convolutional neural networks with ReLUs train several times faster than their equivalents with tanh units. This is demonstrated in Figure 1, which shows the number of iterations required to reach 25% training error on the CIFAR-10 dataset for a particular four-layer convolutional network. This plot shows that we would not have been able to experiment with such large neural networks for this work if we had used traditional saturating neuron models.
 
-**中文:** 将神经元输出 f 建模为其输入 x 的函数，标准做法是用 $f(x) = \tanh(x)$ 或 $f(x) = (1 + e^{-x})^{-1}$。就梯度下降（gradient descent）的训练时间而言，这些饱和非线性（saturating nonlinearity）远慢于非饱和非线性 $f(x) = \max(0, x)$。沿用 Nair 和 Hinton [20] 的叫法，我们将使用这种非线性的神经元称为修正线性单元（Rectified Linear Units，ReLU）。使用 ReLU 的深度卷积神经网络的训练速度，比使用 tanh 单元的同等网络快数倍。图 1 展示了这一点：它给出一个特定的四层卷积网络在 CIFAR-10 数据集上达到 25% 训练错误率所需的迭代次数。这张图表明，如果采用传统的饱和神经元模型，我们根本不可能在这项工作中对如此大规模的神经网络进行实验。
+**中文:** 将神经元输出 f 建模为其输入 x 的函数，标准做法是用 $f(x) = \tanh(x)$ 或 $f(x) = (1 + e^{-x})^{-1}$。就梯度下降（gradient descent）的训练时间而言，这些饱和非线性（saturating nonlinearity）远慢于非饱和非线性 $f(x) = \max(0, x)$。沿用 Nair 和 Hinton [20] 的叫法，我们将使用这种非线性的神经元称为修正线性单元（Rectified Linear Units，ReLU）。==使用 ReLU 的深度卷积神经网络的训练速度，比使用 tanh 单元的同等网络快数倍。==图 1 展示了这一点：它给出一个特定的四层卷积网络在 CIFAR-10 数据集上达到 25% 训练错误率所需的迭代次数。这张图表明，如果采用传统的==饱和神经元模型==，我们根本不可能在这项工作中对如此大规模的神经网络进行实验。
+
+> [!NOTE] Note
+> “饱和神经元”其实就是tanh和Sigmoid，所谓非饱和神经元其实就是ReLU。关于为什么ReLU的训练更加快速，后续论文有更多的探讨。
+
 
 **Original:** We are not the first to consider alternatives to traditional neuron models in CNNs. For example, Jarrett et al. [11] claim that the nonlinearity f(x) = |tanh(x)| works particularly well with their type of contrast normalization followed by local average pooling on the Caltech-101 dataset. However, on this dataset the primary concern is preventing overfitting, so the effect they are observing is different from the accelerated ability to fit the training set which we report when using ReLUs. Faster learning has a great influence on the performance of large models trained on large datasets.
 
-**中文:** 我们并不是第一个考虑在 CNN 中用其他方案替代传统神经元模型的人。例如，Jarrett 等人 [11] 声称，在他们的对比度归一化（contrast normalization）加局部平均池化的方法中，非线性 $f(x) = |\tanh(x)|$ 在 Caltech-101 数据集上效果特别好。然而，在该数据集上首要问题是防止过拟合，因此他们观察到的效果与我们报告的使用 ReLU 时拟合训练集能力的加速是不同的。更快的学习对在大数据集上训练的大模型的性能有很大影响。
+**中文:** 我们并不是第一个考虑在 CNN 中用其他方案替代传统神经元模型的人。例如，Jarrett 等人 [11] 声称，在他们的对比度归一化（contrast normalization）加局部平均池化的方法中，非线性 $f(x) = |\tanh(x)|$ 在 Caltech-101 数据集上效果特别好。然而，==在该数据集上首要问题是防止过拟合==，因此他们观察到的效果与我们报告的使用 ReLU 时拟合训练集能力的加速是不同的。更快的学习对在大数据集上训练的大模型的性能有很大影响。
 
 ### 3.2 Training on Multiple GPUs（多 GPU 训练）
 
 **Original:** A single GTX 580 GPU has only 3GB of memory, which limits the maximum size of the networks that can be trained on it. It turns out that 1.2 million training examples are enough to train networks which are too big to fit on one GPU. Therefore we spread the net across two GPUs. Current GPUs are particularly well-suited to cross-GPU parallelization, as they are able to read from and write to one another's memory directly, without going through host machine memory. The parallelization scheme that we employ essentially puts half of the kernels (or neurons) on each GPU, with one additional trick: the GPUs communicate only in certain layers. This means that, for example, the kernels of layer 3 take input from all kernel maps in layer 2. However, kernels in layer 4 take input only from those kernel maps in layer 3 which reside on the same GPU. Choosing the pattern of connectivity is a problem for cross-validation, but this allows us to precisely tune the amount of communication until it is an acceptable fraction of the amount of computation.
 
-**中文:** 单张 GTX 580 GPU 只有 3GB 显存，这限制了可在其上训练的网络的最大规模。事实证明，120 万训练样本足以训练出大到单张 GPU 放不下的网络。因此我们把网络分摊到两张 GPU 上。当前的 GPU 特别适合跨 GPU 并行，因为它们可以直接读写彼此的显存，无需经过主机内存。我们采用的并行方案本质上把一半卷积核（kernel，或神经元）放在每张 GPU 上，另加一个小技巧：GPU 只在特定层之间通信。这意味着，例如第 3 层的卷积核从第 2 层的所有卷积核映射（kernel map）接收输入；而第 4 层的卷积核只从第 3 层中位于同一 GPU 上的那些卷积核映射接收输入。连接模式的选择是一个交叉验证（cross-validation）问题，但这让我们能够精确调整通信量，直到它只占计算量的一个可接受的比例。
+**中文:** 单张 GTX 580 GPU 只有 3GB 显存，这限制了可在其上训练的网络的最大规模。事实证明，120 万训练样本足以训练出大到单张 GPU 放不下的网络。因此我们把网络分摊到两张 GPU 上。当前的 GPU 特别适合跨 GPU 并行，因为它们可以直接读写彼此的显存，无需经过主机内存。我们采用的并行方案本质上把一半卷积核（kernel，或神经元）放在每张 GPU 上，另加一个小技巧：==GPU 只在特定层之间通信==。这意味着，例如第 3 层的卷积核从第 2 层的所有卷积核映射（kernel map）接收输入；而第 4 层的卷积核只从第 3 层中位于同一 GPU 上的那些卷积核映射接收输入。连接模式的选择是一个交叉验证（cross-validation）问题，但这让我们能够精确调整通信量，直到它只占计算量的一个可接受的比例。
+
+> [!NOTE] Note
+> 后面的示意图中可以看到这一点。
+
 
 **Original:** The resultant architecture is somewhat similar to that of the "columnar" CNN employed by Cire¸san et al. [5], except that our columns are not independent (see Figure 2). This scheme reduces our top-1 and top-5 error rates by 1.7% and 1.2%, respectively, as compared with a net with half as many kernels in each convolutional layer trained on one GPU. The two-GPU net takes slightly less time to train than the one-GPU net^2.
 
 **中文:** 最终得到的结构有点类似 Cire¸san 等人 [5] 所用的「柱状」（columnar）CNN，区别在于我们的柱之间不是相互独立的（见图 2）。与每层卷积核数量减半、在单 GPU 上训练的网络相比，该方案使我们的 top-1 和 top-5 错误率分别降低了 1.7% 和 1.2%。双 GPU 网络的训练时间比单 GPU 网络略短²。
 
-> **脚注 2（译）**：单 GPU 网络在最后一个卷积层上实际拥有与双 GPU 网络相同数量的卷积核。这是因为网络的大部分参数都在第一个全连接层，而该层以最后一个卷积层的输出为输入。因此，为了让两个网络具有大致相同的参数量，我们没有将最后一个卷积层（以及其后的全连接层）减半。所以这一比较对单 GPU 网络有利，因为它比双 GPU 网络的「一半」要大。
+> **脚注 2（译）**：单 GPU 网络在最后一个卷积层上实际拥有与双 GPU 网络相同数量的卷积核。这是因为网络的大部分参数都在第一个全连接层，而该层以最后一个卷积层的输出为输入。==因此==，==为了让两个网络具有大致相同的参数量，我们没有将最后一个卷积层（以及其后的全连接层）减半。所以这一比较对单 GPU 网络有利，因为它比双 GPU 网络的「一半」要大。==
 > **脚注 2（原文）**: The one-GPU net actually has the same number of kernels as the two-GPU net in the final convolutional layer. This is because most of the net's parameters are in the first fully-connected layer, which takes the last convolutional layer as input. So to make the two nets have approximately the same number of parameters, we did not halve the size of the final convolutional layer (nor the fully-conneced layers which follow). Therefore this comparison is biased in favor of the one-GPU net, since it is bigger than "half the size" of the two-GPU net.
+
+
+> [!NOTE] Note
+> 莫名其妙，果然神级论文就可以不详细解释自己的工作，详细原理见下文。
+
+
 ### 3.3 Local Response Normalization（局部响应归一化）
 
 **Original:** ReLUs have the desirable property that they do not require input normalization to prevent them from saturating. If at least some training examples produce a positive input to a ReLU, learning will happen in that neuron. However, we still find that the following local normalization scheme aids generalization. Denoting by a^i_(x,y) the activity of a neuron computed by applying kernel i at position (x, y) and then applying the ReLU nonlinearity, the response-normalized activity b^i_(x,y) is given by the expression
@@ -109,6 +138,11 @@ $$b^i_{x,y} = a^i_{x,y}\Big/\left(k + \alpha \sum_{j=\max(0, i-n/2)}^{\min(N-1, 
 
 **中文:** 该方案与 Jarrett 等人 [11] 的局部对比度归一化方案有些相似，但我们的方案更确切地应称为「亮度归一化」（brightness normalization），因为我们没有减去均值。响应归一化使我们的 top-1 和 top-5 错误率分别降低了 1.4% 和 1.2%。我们还在 CIFAR-10 数据集上验证了这一方案的有效性：一个四层 CNN 在无归一化时测试错误率为 13%，有归一化时为 11%³。
 
+
+> [!NOTE]  Note
+> 事实上后续的研究中很少使用这个技术，可以先不研究这个问题。
+
+
 > **脚注 3（译）**：受篇幅所限，我们无法详细描述该网络，但它已由这里提供的代码和参数文件精确指定：http://code.google.com/p/cuda-convnet/。
 > **脚注 3（原文）**: We cannot describe this network in detail due to space constraints, but it is specified precisely by the code and parameter files provided here: http://code.google.com/p/cuda-convnet/.
 
@@ -116,13 +150,21 @@ $$b^i_{x,y} = a^i_{x,y}\Big/\left(k + \alpha \sum_{j=\max(0, i-n/2)}^{\min(N-1, 
 
 **Original:** Pooling layers in CNNs summarize the outputs of neighboring groups of neurons in the same kernel map. Traditionally, the neighborhoods summarized by adjacent pooling units do not overlap (e.g., [17, 11, 4]). To be more precise, a pooling layer can be thought of as consisting of a grid of pooling units spaced s pixels apart, each summarizing a neighborhood of size z × z centered at the location of the pooling unit. If we set s = z, we obtain traditional local pooling as commonly employed in CNNs. If we set s < z, we obtain overlapping pooling. This is what we use throughout our network, with s = 2 and z = 3. This scheme reduces the top-1 and top-5 error rates by 0.4% and 0.3%, respectively, as compared with the non-overlapping scheme s = 2, z = 2, which produces output of equivalent dimensions. We generally observe during training that models with overlapping pooling find it slightly more difficult to overfit.
 
-**中文:** CNN 中的池化层汇总同一卷积核映射中相邻神经元组的输出。传统上，相邻池化单元汇总的邻域互不重叠（例如 [17, 11, 4]）。更准确地说，池化层可以看作由间距为 s 像素的池化单元网格组成，每个单元汇总以该池化单元位置为中心、大小为 z × z 的邻域。若令 s = z，就得到 CNN 中常用的传统局部池化；若令 s < z，则得到重叠池化（overlapping pooling）。我们整个网络都使用重叠池化，取 s = 2 和 z = 3。与输出维度相同的非重叠方案 s = 2、z = 2 相比，该方案使 top-1 和 top-5 错误率分别降低了 0.4% 和 0.3%。我们在训练中普遍观察到，使用重叠池化的模型稍难出现过拟合。
+**中文:** CNN 中的池化层汇总同一卷积核映射中相邻神经元组的输出。传统上，相邻池化单元汇总的邻域互不重叠（例如 [17, 11, 4]）。更准确地说，池化层可以看作由间距为 s 像素的池化单元网格组成，每个单元汇总以该池化单元位置为中心、大小为 z × z 的邻域。若令 s = z，就得到 CNN 中常用的传统局部池化；若令 s < z，则得到重叠池化（overlapping pooling）。我们整个网络都使用重叠池化，取 s = 2 和 z = 3。与输出维度相同的非重叠方案 s = 2、z = 2 相比，该方案使 top-1 和 top-5 错误率分别降低了 0.4% 和 0.3%。我们在训练中普遍观察到，==使用重叠池化的模型稍难出现过拟合。==
+
+> [!NOTE] Note
+> 重叠池化在直觉上似乎也是有道理的，因为很大一片区域的重点很有可能是同一个。关于过拟合的问题，有待进一步研究。
 
 ### 3.5 Overall Architecture（总体结构）
 
 **Original:** Now we are ready to describe the overall architecture of our CNN. As depicted in Figure 2, the net contains eight layers with weights; the first five are convolutional and the remaining three are fully-connected. The output of the last fully-connected layer is fed to a 1000-way softmax which produces a distribution over the 1000 class labels. Our network maximizes the multinomial logistic regression objective, which is equivalent to maximizing the average across training cases of the log-probability of the correct label under the prediction distribution.
 
-**中文:** 现在我们可以描述 CNN 的总体结构了。如图 2 所示，网络包含八个带权重的层：前五个是卷积层，其余三个是全连接层。最后一个全连接层的输出被送入 1000 路的 Softmax，产生 1000 个类别标签上的分布。我们的网络最大化多项逻辑回归（multinomial logistic regression）目标函数，这等价于在训练样本上最大化预测分布下正确标签的对数概率（log-probability）的平均值。
+**中文:** 现在我们可以描述 CNN 的总体结构了。如图 2 所示，网络包含八个带权重的层：前五个是卷积层，其余三个是全连接层。最后一个全连接层的输出被送入 1000 路的 Softmax，产生 1000 个类别标签上的分布。我们的网络最大化==多项逻辑回归（multinomial logistic regression）目标函数，这等价于在训练样本上最大化预测分布下正确标签的对数概率（log-probability）的平均值。==
+
+
+> [!NOTE] Note
+> 事实上，模型就是拟合了一个输入为原始图像，输出为1000个种类的概率分布的映射。不过我们在后文会看到一个非常重要的观察：输出空间中，一组距离相近的向量，其对应的图像在类别上往往也是高度相似的。这不但说明模型的确找出了特征，还说明嵌入空间很有可能是一个稀疏的连续空间，一个流形。尽管三位作者在当时并没有特别意识到这件事，但这个思路会在之后的研究中大放异彩。
+
 
 **Original:** The kernels of the second, fourth, and fifth convolutional layers are connected only to those kernel maps in the previous layer which reside on the same GPU (see Figure 2). The kernels of the third convolutional layer are connected to all kernel maps in the second layer. The neurons in the fully-connected layers are connected to all neurons in the previous layer. Response-normalization layers follow the first and second convolutional layers. Max-pooling layers, of the kind described in Section 3.4, follow both response-normalization layers as well as the fifth convolutional layer. The ReLU non-linearity is applied to the output of every convolutional and fully-connected layer.
 
@@ -130,13 +172,30 @@ $$b^i_{x,y} = a^i_{x,y}\Big/\left(k + \alpha \sum_{j=\max(0, i-n/2)}^{\min(N-1, 
 
 > **图 2（译）**：我们 CNN 的结构示意图，明确展示了两张 GPU 之间的职责划分。一张 GPU 运行图中顶部的层部分，另一张 GPU 运行底部的层部分。GPU 只在特定层之间通信。网络输入为 150,528 维，网络其余各层的神经元数量依次为 253,440–186,624–64,896–64,896–43,264–4096–4096–1000。（原图见 paper.pdf 第 5 页，见下方图）
 
+
+> [!NOTE] Note
+> 开宗立派的论文的插图也是有可能显示不完整的~
+
+
 ![第2号图（原图裁剪）](assets/figures/fig-2.png)
+
+
+> [!NOTE] Note
+> 简单描述一下整个模型的结构：
+> 整个模型分为两部分，对应着两个GPU上的数据。输入就是一张224x224x3的RGB张量，它会先经过五个卷积层，每层的结果中，图像的规模越来越小，层数越来越多，对应着模型减少图片维度、提炼图片特征的过程。
+> 池化层分别安放在conv1、conv2和conv5之后，后文会提到这里用的是重叠池化。池化是一个通过放弃精细的局部颜色和位置信息，来提取关键特征的方法，它的具体操作就是对每个小窗口，只取其中的最大值，得到新的矩阵。
+> 在经过五个卷积层、三个池化层以后，每张显卡上分别会得到一个2048维的向量，将两个2048维的向量合并成4096维的向量，它作为输入经过线性层，得到一个1000维度的向量，这个向量经过Softmax以后的结果就是模型的最终输出。
+> 值得注意的是，两张GPU上信息的传递，是在卷积层2与卷积层3之间完成的。
+
+
+
+
 
 > **Figure 2（原文）**: An illustration of the architecture of our CNN, explicitly showing the delineation of responsibilities between the two GPUs. One GPU runs the layer-parts at the top of the figure while the other runs the layer-parts at the bottom. The GPUs communicate only at certain layers. The network's input is 150,528-dimensional, and the number of neurons in the network's remaining layers is given by 253,440–186,624–64,896–64,896–43,264–4096–4096–1000.
 
 **Original:** The first convolutional layer filters the 224×224×3 input image with 96 kernels of size 11×11×3 with a stride of 4 pixels (this is the distance between the receptive field centers of neighboring neurons in a kernel map). The second convolutional layer takes as input the (response-normalized and pooled) output of the first convolutional layer and filters it with 256 kernels of size 5 × 5 × 48. The third, fourth, and fifth convolutional layers are connected to one another without any intervening pooling or normalization layers. The third convolutional layer has 384 kernels of size 3 × 3 × 256 connected to the (normalized, pooled) outputs of the second convolutional layer. The fourth convolutional layer has 384 kernels of size 3 × 3 × 192, and the fifth convolutional layer has 256 kernels of size 3 × 3 × 192. The fully-connected layers have 4096 neurons each.
 
-**中文:** 第一卷积层用 96 个大小为 11×11×3 的卷积核、以 4 像素的步长（stride）对 224×224×3 的输入图像做卷积（该步长即同一卷积核映射中相邻神经元感受野（receptive field）中心的距离）。第二卷积层以第一卷积层（响应归一化并池化后）的输出为输入，用 256 个大小为 5 × 5 × 48 的卷积核对其进行卷积。第三、第四和第五卷积层依次相连，中间没有任何池化层或归一化层。第三卷积层有 384 个大小为 3 × 3 × 256 的卷积核，与第二卷积层的（归一化、池化后的）输出相连。第四卷积层有 384 个大小为 3 × 3 × 192 的卷积核，第五卷积层有 256 个大小为 3 × 3 × 192 的卷积核。全连接层每层有 4096 个神经元。
+**中文:** 第一卷积层用 96 个大小为 11×11×3 的卷积核、以 4 像素的步长（stride）对 224×224×3 的输入图像做卷积（该步长即同一卷积核映射中相邻神经元感受野（receptive field）中心的距离）。第二卷积层以第一卷积层（响应归一化并池化后）的输出为输入，用 256 个大小为 5 × 5 × 48 的卷积核对其进行卷积。第三、第四和第五卷积层依次相连，中间==没有任何池化层或归一化层==。第三卷积层有 384 个大小为 3 × 3 × 256 的卷积核，与第二卷积层的（归一化、池化后的）输出相连。第四卷积层有 384 个大小为 3 × 3 × 192 的卷积核，第五卷积层有 256 个大小为 3 × 3 × 192 的卷积核。全连接层每层有 4096 个神经元。
 
 ---
 
@@ -146,15 +205,38 @@ $$b^i_{x,y} = a^i_{x,y}\Big/\left(k + \alpha \sum_{j=\max(0, i-n/2)}^{\min(N-1, 
 
 **中文:** 我们的神经网络结构有 6000 万参数。尽管 ILSVRC 的 1000 个类别使每个训练样本对「图像到标签」的映射施加 10 比特的约束，但事实证明这不足以在不出现严重过拟合的情况下学习如此多的参数。下面我们介绍对抗过拟合的两种主要方法。
 
+
+> [!NOTE] Note
+> 这里解释一下“施加10比特约束”的含义。”比特“的意思是**一次是非回答所携带的信息量**。对于ILSVRC的图像识别问题，给定一张图像，如果能把它固定到某一个类别，最少需要10次是非问答（二分查找，”这张图片属于前500个类别吗？“，etc.），因此分类一张图片携带的信息量就是10比特。
+> 根据这个想法，ILSVRC的图像库中一共有120万样本，每个样本要想确定下来至少都需要10个比特的数据，那么精准分类所有图像所需要的理论最少信息量也就是：
+> 120万×10比特=1200万比特
+> 但是，我们的神经网络有6000万参数，每个参数都是一个float32形的浮点数，那么它携带的信息量是：
+> 6000万×32比特≈1.9亿比特
+> 也就是说，作者想表达的是：尽管测试集的容量已经达到了120万张，AlexNet携带的信息量也远远大于分类测试集需要的理论最少信息量。神经网络的信息量远大于分类所需是合理的，因为模型需要学会的是特征，而不是学会背答案。但既然背诵足够拿满分，网络就倾向于背诵而不是理解规律（因为这样做简单）。文章接下来讨论的就是：为了让模型真正学会识别图像特征，作者在监督过程中使用的两个技巧——数据增强和dropout。
+
+
+
+
+
 ### 4.1 Data Augmentation（数据增强）
 
 **Original:** The easiest and most common method to reduce overfitting on image data is to artificially enlarge the dataset using label-preserving transformations (e.g., [25, 4, 5]). We employ two distinct forms of data augmentation, both of which allow transformed images to be produced from the original images with very little computation, so the transformed images do not need to be stored on disk. In our implementation, the transformed images are generated in Python code on the CPU while the GPU is training on the previous batch of images. So these data augmentation schemes are, in effect, computationally free.
 
-**中文:** 在图像数据上减少过拟合最简单、最常用的方法，是使用保持标签的变换人为地扩大数据集（例如 [25, 4, 5]）。我们采用两种不同形式的数据增强（data augmentation），它们都能以极少的计算量从原始图像生成变换后的图像，因此变换后的图像无需存储在磁盘上。在我们的实现中，变换后的图像由 CPU 上的 Python 代码生成，与此同时 GPU 正在前一批图像上训练。因此这些数据增强方案实际上几乎不消耗计算资源。
+**中文:** 在图像数据上减少过拟合最简单、最常用的方法，是使用保持标签的变换人为地扩大数据集（例如 [25, 4, 5]）。我们采用两种不同形式的数据增强（data augmentation），它们都能以极少的计算量从原始图像生成变换后的图像，因此变换后的图像无需存储在磁盘上。在我们的实现中，变换后的图像由 ==CPU== 上的 Python 代码生成，与此同时 GPU 正在前一批图像上训练。因此这些数据增强方案实际上几乎==不消耗计算资源==。
+
+
+> [!NOTE] Note
+> 文章于2012年发表，CUDA的发明时间是2007年，此时显卡技术还没有如今那么成熟。作者的意思是，跟在显卡上训练数据所需要的时间相比，CPU做图像变换的时间要快上许多，因此我们可以一边用变换后的图像在显卡上训练，一边用CPU做图像变换，相当于图像变换的时间就可以节省下来了。今时不同往日，以现在的视角来看，GPU的发展速度要远远快于CPU，如今如果再做完全相同的实验，那么限制时间的主要因素就反倒变成这个CPU上进行的图像变换了。
+
 
 **Original:** The first form of data augmentation consists of generating image translations and horizontal reflections. We do this by extracting random 224 × 224 patches (and their horizontal reflections) from the 256×256 images and training our network on these extracted patches^4. This increases the size of our training set by a factor of 2048, though the resulting training examples are, of course, highly interdependent. Without this scheme, our network suffers from substantial overfitting, which would have forced us to use much smaller networks. At test time, the network makes a prediction by extracting five 224 × 224 patches (the four corner patches and the center patch) as well as their horizontal reflections (hence ten patches in all), and averaging the predictions made by the network's softmax layer on the ten patches.
 
-**中文:** 第一种数据增强包括生成图像的平移变换和水平翻转。具体做法是：从 256×256 的图像中随机提取 224 × 224 的图像块（及其水平翻转版本），并在这些提取出的图像块上训练网络⁴。这使训练集规模扩大了 2048 倍，不过由此产生的训练样本当然是高度相互依赖的。没有这个方案，我们的网络会严重过拟合，那将迫使我们使用小得多的网络。测试时，网络提取五个 224 × 224 图像块（四个角上的图像块和中心图像块）及其水平翻转版本（共十个图像块）来做预测，并对网络的 Softmax 层在这十个图像块上做出的预测取平均。
+**中文:** 第一种数据增强包括生成图像的平移变换和水平翻转。具体做法是：==从 256×256 的图像中随机提取 224 × 224 的图像块（及其水平翻转版本）==，并在这些提取出的图像块上训练网络⁴。这使训练集规模扩大了 ==2048 倍==，不过由此产生的训练样本当然是高度相互依赖的。没有这个方案，我们的网络会严重过拟合，那将迫使我们使用小得多的网络。测试时，网络提取五个 224 × 224 图像块（==四个角上的图像块和中心图像块==）及其==水平翻转版本==（共十个图像块）来做预测，并对网络的 Softmax 层在这十个图像块上做出的预测取==平均==。
+
+
+> [!NOTE] Note
+> 这里解释了为什么原始图象是256×256，输入数据却变成224×224。理论上讲，如果我们在原始图像中随机裁剪224×224的小块，算上水平翻转的版本，一共有32×32×2=2048种可能，但我们当然不会这么做，因为这些小块中有大部分信息都是重复的。我们仅仅取出有代表性的10个块，每一块在经过AlexNet以后都会得到一个1000维向量，让这些向量再按照类别取一个平均值，才是我们要的最终结果。就跟人一样，对于一张图片，人在不同角度看很多次（看左上角、看右下角、看中间、看镜像版本....）才会获得更全面的认识。
+
 
 > **脚注 4（译）**：这就是图 2 中输入图像为 224 × 224 × 3 维的原因。
 > **脚注 4（原文）**: This is the reason why the input images in Figure 2 are 224 × 224 × 3-dimensional.
@@ -170,15 +252,35 @@ where p_i and λ_i are ith eigenvector and eigenvalue of the 3 × 3 covariance m
 $$[p_1, p_2, p_3][\alpha_1\lambda_1, \alpha_2\lambda_2, \alpha_3\lambda_3]^T$$
 
 其中 $p_i$ 和 $\lambda_i$ 分别是 RGB 像素值的 3 × 3 协方差矩阵（covariance matrix）的第 $i$ 个特征向量和特征值，$\alpha_i$ 是前述随机变量。对某张特定训练图像的所有像素，每个 $\alpha_i$ 只抽取一次，直到该图像再次被用于训练时才重新抽取。该方案近似捕捉了自然图像的一个重要性质：物体身份对光照强度和颜色的变化保持不变。该方案使 top-1 错误率降低了超过 1%。
+
+
+> [!NOTE] Note
+> 协方差矩阵长成这个样子：
+>         R              G              B
+R   [ var(R)  cov(R,G) cov(R,B) ]
+G   [ cov(G,R) var(G)  cov(G,B) ]
+B   [ cov(B,R) cov(B,G) var(B)  ] 
+> cov(X, Y) = 均值[(X − x̄)(Y − ȳ)]，它衡量的是两个变量相对均值的偏差程度。如果协方差结果为正，那说明X与Y是同增同减的关系，如果为负，则X与Y偏差方向呈相反的趋势。
+> 协方差矩阵有一个好的性质：**特征向量两两正交，特征值都是非负实数（对称半正定）。** 这项工作其实就是模拟在自然光的方向和强度发生变化时的同一个物体的图像。如果你在原图的基础上随机加一个噪声，那就很有很有可能给图片施加一个现实中不会生成的诡异的光，这种信息反而对泛化有害。自然光对图片的作用是让整个图片朝着特定的几个方向平移，光照差异恰好就是最大的方差变化来源。换句话说，协方差矩阵的特征向量，就是光变化的主要方向。
+
+
+
+
 ### 4.2 Dropout（随机失活）
 
 **Original:** Combining the predictions of many different models is a very successful way to reduce test errors [1, 3], but it appears to be too expensive for big neural networks that already take several days to train. There is, however, a very efficient version of model combination that only costs about a factor of two during training. The recently-introduced technique, called "dropout" [10], consists of setting to zero the output of each hidden neuron with probability 0.5. The neurons which are "dropped out" in this way do not contribute to the forward pass and do not participate in backpropagation. So every time an input is presented, the neural network samples a different architecture, but all these architectures share weights. This technique reduces complex co-adaptations of neurons, since a neuron cannot rely on the presence of particular other neurons. It is, therefore, forced to learn more robust features that are useful in conjunction with many different random subsets of the other neurons. At test time, we use all the neurons but multiply their outputs by 0.5, which is a reasonable approximation to taking the geometric mean of the predictive distributions produced by the exponentially-many dropout networks.
 
 **中文:** 组合许多不同模型的预测是降低测试错误率的一种非常成功的方法 [1, 3]，但对于已经需要几天时间训练的大型神经网络来说，这似乎代价太高。不过，存在一种非常高效的模型组合形式，训练成本只增加约一倍。这项近期提出的技术称为「随机失活」（dropout）[10]，其做法是以 0.5 的概率将每个隐藏神经元的输出置零。以这种方式「失活」的神经元既不参与前向传播，也不参与反向传播（backpropagation）。因此，每次输入呈现时，神经网络都在采样一个不同的结构，但所有这些结构共享权重。该技术减少了神经元之间复杂的协同适应（co-adaptation），因为一个神经元不能依赖其他特定神经元的存在。因此，它被迫学习更鲁棒的特征，这些特征在与许多不同的随机神经元子集结合时都有用。测试时，我们使用所有神经元，但将其输出乘以 0.5，这是对指数级数量的失活网络产生的预测分布取几何平均（geometric mean）的合理近似。
 
+
+> [!NOTE] Note
+> 这个方法听起来实在是相当不可思议，它看上去简单过头了。不过假设按照神经元随机失活的方式真的能梯度下降到达最低谷，那用这种方式训练出的模型一定有一个漂亮的性质：随机砍掉它的任意一部分，剩下的神经元仍然具有不错的拟合能力。这不正等价于不存在两层神经元相互勾连吗？
+> 关于为什么dropout如此有效，可以去看Wager 等人（2013）的证明，内容主要是说明：dropout 在广义线性模型上等价于一种**自适应 L2 正则**。
+
+
 **Original:** We use dropout in the first two fully-connected layers of Figure 2. Without dropout, our network exhibits substantial overfitting. Dropout roughly doubles the number of iterations required to converge.
 
-**中文:** 我们在图 2 的前两个全连接层中使用随机失活。不使用随机失活时，我们的网络会表现出严重的过拟合。随机失活使收敛所需的迭代次数大约翻倍。
+**中文:** 我们在图 2 的前两个全连接层中使用随机失活。不使用随机失活时，我们的网络会表现出严重的过拟合。==随机失活使收敛所需的迭代次数大约翻倍==。
 
 > **图 3（译）**：第一卷积层在 224×224×3 输入图像上学到的 96 个大小为 11×11×3 的卷积核。上面 48 个卷积核在 GPU 1 上学得，下面 48 个在 GPU 2 上学得。详见第 6.1 节。（原图见 paper.pdf 第 6 页，见下方图）
 
@@ -198,7 +300,7 @@ $$w_{i+1} := w_i + v_{i+1}$$
 
 where i is the iteration index, v is the momentum variable, ϵ is the learning rate, and ⟨∂L/∂w|_(w_i)⟩_(D_i) is the average over the ith batch D_i of the derivative of the objective with respect to w, evaluated at w_i.
 
-**中文:** 我们使用随机梯度下降（Stochastic Gradient Descent，SGD）训练模型，批次大小（batch size）为 128 个样本，动量（momentum）为 0.9，权重衰减（weight decay）为 0.0005。我们发现这一小量权重衰减对模型的学习很重要。换句话说，这里的权重衰减不仅仅是一个正则化项：它降低了模型的训练误差。权重 w 的更新规则为
+**中文:** 我们使用==随机梯度下降==（Stochastic Gradient Descent，SGD）训练模型，批次大小（batch size）为 128 个样本，动量（momentum）为 0.9，权重衰减（weight decay）为 0.0005。我们发现这一小量权重衰减对模型的学习很重要。换句话说，这里的权重衰减不仅仅是一个正则化项：它降低了模型的训练误差。权重 w 的更新规则为
 
 $$v_{i+1} := 0.9 \cdot v_i - 0.0005 \cdot \epsilon \cdot w_i - \epsilon \cdot \left\langle \frac{\partial L}{\partial w}\bigg|_{w_i}\right\rangle_{D_i}$$
 
@@ -206,13 +308,27 @@ $$w_{i+1} := w_i + v_{i+1}$$
 
 其中 $i$ 是迭代序号，$v$ 是动量变量，$\epsilon$ 是学习率（learning rate），$\left\langle \frac{\partial L}{\partial w}\big|_{w_i}\right\rangle_{D_i}$ 是目标函数对 $w$ 的导数在第 $i$ 个批次 $D_i$ 上的平均值（在 $w_i$ 处取值）。
 
+
+> [!NOTE] Note
+> 这里有三件事需要思考一下，一件是SGD本身，一件是动量，一件是weight decay。
+> 首先说SGD，在当年的条件下，AlexNet如果每次训练都要把所有图像全部计算进去，那么走过一个epoch就需要六七天，而神经网络的训练往往需要成千上万个epoch，全量计算完全是不可行的。在每个epoch中，我们都随机抽取固定数目的图像（此处为128个）作为输入，计算它的损失函数，把它近似为全体图像的损失函数，这样就可以做到大大减少计算量，同时得到一个近似的解。因为每个epoch都没有考虑所有测试数据，所以前进的每一步都携带着一些噪声。事实上，在非凸优化的问题中，噪声反倒是我们必须的。完全体损失函数的流形上很有可能存在一些鞍点，鞍点附近任何方向的梯度都很小，只有通过噪声，模型才能跨过鞍点，抵达全局最优。
+> 再说动量。想象你在一条大体上还算笔直的公路上穿行，现在有两个策略：其一，每一次都朝着正确的方向前进一小步；其二，给车一个初速度，让它在公路上滑行，然后每一轮都通过确定方向来更改车的方向和速度大小。若论精准程度，策略一显然是更好的，但策略二更加快速。当然，如果添加动量，即便乘一个衰减系数，也不可避免地会遇到过冲的问题，因此动量只是为了帮我们快速地找到全局最优附近的位置，想真正走到低谷，还需要进一步微调。
+> 最后是weight decay，增加它以后，每一步模型都会受到一个往零点牵引的微弱驱力。它是一个避免模型过度关注少量几个神经元，忽略掉其他神经元，而导致过拟合的限制。若某几个神经元的影响力太大，模型就会过度依赖与这个神经元契合度高的图像（比如说，与某个卷积核高度相似的卷积层），而缺乏泛化能力。
+
+
+
 **Original:** We initialized the weights in each layer from a zero-mean Gaussian distribution with standard deviation 0.01. We initialized the neuron biases in the second, fourth, and fifth convolutional layers, as well as in the fully-connected hidden layers, with the constant 1. This initialization accelerates the early stages of learning by providing the ReLUs with positive inputs. We initialized the neuron biases in the remaining layers with the constant 0.
 
 **中文:** 每层的权重都从均值为 0、标准差为 0.01 的高斯分布初始化。我们将第二、第四和第五卷积层以及全连接隐藏层中的神经元偏置（bias）初始化为常数 1。这种初始化通过为 ReLU 提供正输入来加速学习的早期阶段。其余层的神经元偏置初始化为常数 0。
 
 **Original:** We used an equal learning rate for all layers, which we adjusted manually throughout training. The heuristic which we followed was to divide the learning rate by 10 when the validation error rate stopped improving with the current learning rate. The learning rate was initialized at 0.01 and reduced three times prior to termination. We trained the network for roughly 90 cycles through the training set of 1.2 million images, which took five to six days on two NVIDIA GTX 580 3GB GPUs.
 
-**中文:** 我们对所有层使用相同的学习率，并在整个训练过程中手动调整。我们遵循的经验法则是：当验证错误率在当前学习率下不再改善时，就将学习率除以 10。学习率初始化为 0.01，在训练终止前共下调了三次。我们在 120 万张图像的训练集上训练了大约 90 个轮次（epoch），在两张 NVIDIA GTX 580 3GB GPU 上耗时五到六天。
+**中文:** 我们对所有层使用相同的学习率，并在整个训练过程中手动调整。我们遵循的经验法则是：当验证错误率在当前学习率下不再改善时，==就将学习率除以 10==。学习率初始化为 0.01，在训练终止前共下调了三次。我们在 120 万张图像的训练集上训练了大约 90 个轮次（epoch），在两张 NVIDIA GTX 580 3GB GPU 上耗时五到六天。
+
+
+> [!NOTE] Note
+> 训练不动就除以10，在现在看来还是比较繁琐的工作，而且它不平滑。2014年的adam算法就改善了这个问题：随着epoch的增长，先让学习率线性地升起来，再余弦地降下来。
+
 
 ---
 
@@ -225,6 +341,11 @@ $$w_{i+1} := w_i + v_{i+1}$$
 > **表 1（译）**：ILSVRC-2010 测试集上的结果对比。斜体为其他方法取得的最好结果。（原表见 paper.pdf 第 7 页，见下方图）
 
 ![第1号图（原图裁剪）](assets/figures/tab-1.png)
+
+
+> [!NOTE] Note
+> 比第二高出十多个百分点，一战成名。
+
 
 > **Table 1（原文）**: Comparison of results on ILSVRC-2010 test set. In italics are best results achieved by others.
 
@@ -266,6 +387,12 @@ $$w_{i+1} := w_i + v_{i+1}$$
 
 ![第4号图（原图裁剪）](assets/figures/fig-4.png)
 
+
+> [!NOTE] Note
+> 这张图片的工作其实非常重要。模型不但从海量数据中学会提取特征，而且还成功做到把人能看懂的RGB矩阵空间，映射到机器能“看懂”的嵌入空间——向量的距离即图像的相似度。
+> 后面有一篇论文做了一个非常棒的可视化，它把高维嵌入空间做了一个降维变换，向我们展示出图形是怎样在嵌入空间中滑动、变换，最终从一张图片变成另一张图片的。
+
+
 > **Figure 4（原文）**: (Left) Eight ILSVRC-2010 test images and the five labels considered most probable by our model. The correct label is written under each image, and the probability assigned to the correct label is also shown with a red bar (if it happens to be in the top 5). (Right) Five ILSVRC-2010 test images in the first column. The remaining columns show the six training images that produce feature vectors in the last hidden layer with the smallest Euclidean distance from the feature vector for the test image.
 
 **Original:** In the left panel of Figure 4 we qualitatively assess what the network has learned by computing its top-5 predictions on eight test images. Notice that even off-center objects, such as the mite in the top-left, can be recognized by the net. Most of the top-5 labels appear reasonable. For example, only other types of cat are considered plausible labels for the leopard. In some cases (grille, cherry) there is genuine ambiguity about the intended focus of the photograph.
@@ -274,7 +401,7 @@ $$w_{i+1} := w_i + v_{i+1}$$
 
 **Original:** Another way to probe the network's visual knowledge is to consider the feature activations induced by an image at the last, 4096-dimensional hidden layer. If two images produce feature activation vectors with a small Euclidean separation, we can say that the higher levels of the neural network consider them to be similar. Figure 4 shows five images from the test set and the six images from the training set that are most similar to each of them according to this measure. Notice that at the pixel level, the retrieved training images are generally not close in L2 to the query images in the first column. For example, the retrieved dogs and elephants appear in a variety of poses. We present the results for many more test images in the supplementary material.
 
-**中文:** 探测网络视觉知识的另一种方式是考察图像在最后一个 4096 维隐藏层上引发的特征激活（feature activation）。如果两张图像产生的特征激活向量欧氏距离（Euclidean separation）很小，就可以说神经网络的较高层认为它们相似。图 4 展示了五张测试图像，以及按此度量与每张测试图像最相似的六张训练图像。注意在像素层面，检索出的训练图像通常与第一列的查询图像在 L2 距离上并不接近。例如，检索出的狗和大象呈现出各种姿态。我们在补充材料中展示了更多测试图像的结果。
+**中文:** 探测网络视觉知识的另一种方式是考察图像在最后一个 4096 维隐藏层上引发的特征激活（feature activation）。如果两张图像产生的特征激活向量==欧氏距离==（Euclidean separation）很小，就可以说神经网络的较高层认为它们相似。图 4 展示了五张测试图像，以及按此度量与每张测试图像最相似的六张训练图像。注意在像素层面，检索出的训练图像通常与第一列的查询图像在 L2 距离上并不接近。例如，检索出的狗和大象呈现出各种姿态。我们在补充材料中展示了更多测试图像的结果。
 
 **Original:** Computing similarity by using Euclidean distance between two 4096-dimensional, real-valued vectors is inefficient, but it could be made efficient by training an auto-encoder to compress these vectors to short binary codes. This should produce a much better image retrieval method than applying auto-encoders to the raw pixels [14], which does not make use of image labels and hence has a tendency to retrieve images with similar patterns of edges, whether or not they are semantically similar.
 
@@ -290,8 +417,11 @@ $$w_{i+1} := w_i + v_{i+1}$$
 
 **Original:** To simplify our experiments, we did not use any unsupervised pre-training even though we expect that it will help, especially if we obtain enough computational power to significantly increase the size of the network without obtaining a corresponding increase in the amount of labeled data. Thus far, our results have improved as we have made our network larger and trained it longer but we still have many orders of magnitude to go in order to match the infero-temporal pathway of the human visual system. Ultimately we would like to use very large and deep convolutional nets on video sequences where the temporal structure provides very helpful information that is missing or far less obvious in static images.
 
-**中文:** 为简化实验，我们没有使用任何无监督预训练（unsupervised pre-training），尽管我们预计它会有所帮助，尤其是在我们获得足够的算力、能够显著增大网络规模而标注数据量却没有相应增加的情况下。到目前为止，随着网络变得更大、训练时间更长，我们的结果一直在提升，但要达到人类视觉系统的下颞通路（infero-temporal pathway）的水平，还有数量级的差距。最终，我们希望把非常大且深的卷积网络用于视频序列，视频中的时间结构提供了静态图像中缺失或远不明显的非常有用的信息。
+**中文:** 为简化实验，我们没有使用任何==无监督预训练（unsupervised pre-training）==，尽管我们预计它会有所帮助，尤其是在我们获得足够的算力、能够显著增大网络规模而标注数据量却没有相应增加的情况下。到目前为止，随着网络变得更大、训练时间更长，我们的结果一直在提升，但要达到人类视觉系统的下颞通路（infero-temporal pathway）的水平，还有==数量级的差距==。最终，我们希望把非常大且深的卷积网络用于==视频序列==，视频中的时间结构提供了静态图像中缺失或远不明显的非常有用的信息。
 ---
+
+> [!NOTE] Note
+> 这篇论文最后并没有给出一个结论，而只是描述了作者们已有的进展和一些不足。关于AlexNet为什么如此有效这个问题，当年的学者们的理解其实也是”欠拟合”的，段落中高亮的几个内容都能在后续的论文中找到进一步地探讨。AlexNet掀起了深度学习在全世界的浪潮，它证明了一件事：只要数据量足够大，让机器自己学习特征完全可以做到比人类自己设计特征效果还要好。
 
 ## References（参考文献，整体保留原文不译）
 
